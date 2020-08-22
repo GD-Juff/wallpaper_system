@@ -2,7 +2,7 @@
 
 1、登录
 
-# ![1598095312](https:../1598095312.png)
+# ![1598095312](https://images.cnblogs.com/cnblogs_com/Juff-code/1810131/t_2008221356461.png)
 
 2、主页
 
