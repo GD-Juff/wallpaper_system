@@ -17,4 +17,4 @@
 
 5、用户管理界面
 
-![1598097723(1)](https://github.com/GD-Juff/wallpaper_system/blob/master/README/5.png?raw=true)
+![5](https://github.com/GD-Juff/wallpaper_system/blob/master/README/5.png?raw=true)
