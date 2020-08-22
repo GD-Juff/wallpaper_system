@@ -9,12 +9,12 @@
 
 3、上传界面
 
-<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/3.png?raw=true" />
+<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/4.png?raw=true" />
 
 4、个人主页
 
-<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/4.png?raw=true" />
+<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/3.png?raw=true" />
 
 5、用户管理界面
 
-![1598097723(1)](https://github.com/GD-Juff/wallpaper_system/blob/master/README/4.png?raw=true)
+![1598097723(1)](https://github.com/GD-Juff/wallpaper_system/blob/master/README/5.png?raw=true)
