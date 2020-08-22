@@ -5,18 +5,16 @@
 
 2、主页
 
-![1598097476(1)](F:\wallpaper_system\README\1598097476(1).png)
+<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/2.png?raw=true" />
 
 3、上传界面
 
-![1598097641(1)](F:\wallpaper_system\README\1598097641(1).png)
+<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/3.png?raw=true" />
 
 4、个人主页
 
-![1598097541(1)](F:\wallpaper_system\README\1598097541(1).png)
+<img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/4.png?raw=true" />
 
 5、用户管理界面
 
-![1598097723(1)](F:\wallpaper_system\README\1598097723(1).png)
-
-6、
+![1598097723(1)](https://github.com/GD-Juff/wallpaper_system/blob/master/README/4.png?raw=true)
