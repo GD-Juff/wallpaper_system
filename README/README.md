@@ -2,7 +2,7 @@
 
 1、登录
 
-# ![1598095312](https://github.com/GD-Juff/wallpaper_system/blob/master/README/1598095312.png)
+# ![1598095312](https:../1598095312.png)
 
 2、主页
 
