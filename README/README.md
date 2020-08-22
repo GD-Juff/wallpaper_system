@@ -1,7 +1,7 @@
 # wallpaper_system
 
 1、登录
- ![1](https://images.cnblogs.com/cnblogs_com/Juff-code/1810131/o_2008221356461.png)
+ <img src="https://images.cnblogs.com/cnblogs_com/Juff-code/1810131/o_2008221356461.png" />
 
 2、主页
 
