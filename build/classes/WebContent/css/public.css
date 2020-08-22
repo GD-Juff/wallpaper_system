@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: ΢���ź�;
+    font-size: 14px;
+    color: #333;
+}
+
+ul,
+li {
+    list-style: none;  
+	
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+    height:60px;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+html,
+body {
+    background-color: #f2f2f2;
+}
+
+input {
+    outline: none;
+}
+
+
+/*ͼ������*/
+
+@font-face {
+    font-family: 'iconfont';
+    /* project id 194488 */
+    src: url('//at.alicdn.com/t/font_panntn66wyn45cdi.eot');
+    src: url('//at.alicdn.com/t/font_panntn66wyn45cdi.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_panntn66wyn45cdi.woff') format('woff'), url('//at.alicdn.com/t/font_panntn66wyn45cdi.ttf') format('truetype'), url('//at.alicdn.com/t/font_panntn66wyn45cdi.svg#iconfont') format('svg');
+}
+
+.icon {
+    font-family: iconfont;
+    font-style: normal;
+}
+
+
+/*��������*/
+
+#topbanner{
+    text-align: center;
+    display: block;
+    background: #ac26d4;
+    overflow: hidden;
+}
+
+#header {
+    background-color: #20208B;
+    min-width: 1100px;
+}
+
+.header-wrap {
+    width: 1100px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.header-wrap .logo {
+    display: block;
+    width: 253px;
+    height: 60px;
+    /*background-image: url(../../images/web/logo.png);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.logo img {
+    width: 253px;
+    height: 42px;
+    margin-top: 9px;
+}
+
+.header-wrap .nav {
+    margin-left: 20px;
+}
+
+.header-wrap .nav li {
+    float: left;
+}
+
+.header-wrap .nav li a {
+    color: #fff;
+    font-size: 17px;
+    padding: 0 20px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav li a:hover,
+.log-btn:hover,
+.navActive{
+    background-color: #3e3eff;
+    
+    transition: all .3s;
+}
+
+.nav-right {}
+
+
+
+
+.nav-right .log-btn {
+    color: #fff;
+    font-size: 17px;
+    padding: 0 15px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*ͷ��*/
+ .nav-right .headpic{
+	width: 50px;
+  	height: 50px;
+  	display: inline-block;
+  	border-radius: 50%;
+  	overflow: hidden;
+  	position:absolute; 
+	top:1.5%;
+	right:13%;
+	vertical-align: middle;
+}
+ .nav-right .username{
+ 	position:relative; 
+	top:35%;
+	right:380%;
+	/*font-size:17px;*/
+	font-weight:bold;
+	color:white; 
+	font-size:15px;
+ }
+ 
+ 
+
+
+ /*�����˵�*/
+ .dropdown-content {
+  display: none;
+  position: fixed;
+  top:60px;
+  right:100px;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px 10px;
+   z-index:10;
+}
+
+.dropdown-content a:hover{
+	min-width: 100px;
+background-color: #0000ff;
+}
+
+.dropdown-content a:active{
+	min-width: 100px;
+background-color: #ff8080;
+}
+
+
+ .nav-right:hover .dropdown-content {
+  display: block;
+
+}
+.user-header-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background: #fff;
+}
+
+#header-bottom {
+    border-bottom: #e5e5e5 solid 1px;
+    background-color: #fff;
+    min-width: 1100px;
+}
+
+#header-bottom .header-bottom-wrap {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.search-wrap {
+    height: 80px;
+}
+
+.search-wrap .search {
+    width: 400px;
+    border: #20208B solid 2px;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.search .keywords {
+    width: 295px;
+    display: inline-block;
+    height: 35px;
+    border: none;
+    padding-left: 5px;
+}
+
+.search .search-btn {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+    background-color: #20208B;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    font-size: 17px;
+}
+
+.hot-search{
+    margin-top: 27px;
+    margin-left: 40px;
+}
+.hot-search .hot-search-title,
+.hot-search .hot-search-words{
+    display: inline-block;
+    vertical-align: middle;
+}
+.hot-search .hot-search-words{
+    width:278px;
+    height: 22px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.city {}
+
+.city a {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    width: 80px;
+    margin-right: 20px;
+    border: #20208B solid 2px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.city a i {
+    margin-left: 5px;
+}
+
+.publish {}
+
+.publish-btn {
+    display: inline-block;
+    width: 150px;
+    height: 39px;
+    line-height: 39px;
+    color: #fff;
+    background-color: #20208B;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.publish-btn:hover {
+    color: #fff;
+}
+
+.publish-btn i {
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: 3px;
+    color: #fff;
+}
+
+#main {
+    width: 1100px;
+    margin: 20px auto;
+    min-height:350px;
+}
+
+#footer {   position:relative;}
+
+.footer-top-wrap {
+    background-color: #20208B;
+    height: 180px;
+ 
+}
+
+.footer-top {}
+
+.footer-bottom-wrap {
+    background-color: #fff;
+    height: 50px;
+    border-top: #20208B solid 2px;
+    min-width: 1100px;
+}
+
+.footer-bottom {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top:25px;
+}
+
+.footer-bottom p {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.footer-bottom p a,
+.footer-bottom p span {
+    font-size: 15px;
+    color: #A9AAAA;
+}
+
+.footer-bottom p a {
+    margin-right: 150px;
+}
+
+.footer-bottom p a:hover {
+    color: #20208B
+}
+
+p.tips {
+    color: #A9AAAA;
+}
+
+.layui-layer-dialog .layui-layer-content {
+    color: #fff;
+}
+
+#footer .beian {
+    background: url(../../images/web/beian.png) no-repeat left center;
+    padding-left: 25px;
+}
+
+.layui-layer-title {
+    background-color: #20208B;
+    color: #fff;
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #20208B;
+}
+
+.footer-bottom-wrap .footer-bottom .back-to-top {
+    position: fixed;
+    right: 3%;
+    bottom: 10px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 30px;
+    color: #2C2C2C;
+    text-decoration: none;
+    border: 1px  #20208B;  
+}
+
+
+
+/* Dropdown */
+.submenu{
+	position:absolute;
+	width:200px;
+	left:45%;
+	margin-left:-150px;
+    border-radius: 10%;
+
+
+}
+.submenu p{color:greenyellow;}
+.submenu p:hover{color:#f40;}
+
+.submenu li{
+	background-color:#20208B;
+	position:relative;
+	overflow:hidden;
+
+}
+.submenu > li > a{
+	padding:5em 5em;
+	color:white;
+}
+.submenu > li > a:hover{
+	color:#f40;
+}
+
+

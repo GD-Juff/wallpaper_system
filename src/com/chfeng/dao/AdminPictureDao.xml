@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chfeng.dao.AdminPictureDao" >
+    <!-- 要审核的图片 -->
+    <select id="reviewPicture" parameterType="picture" resultType="picture">
+	    select *
+	    from picture
+	    where pic_status = "1"
+	    order by pic_id DESC
+	</select>
+  	
+    <!--审核结果-->
+   <update id="setPic_status" parameterType = "com.chfeng.po.Picture">
+    	update picture
+    	set pic_status = #{pic_status}
+    	where pic_id = #{pic_id}
+    </update>
+
+	<delete id="deleteUserPicture" parameterType = "com.chfeng.po.Picture">
+		delete 
+		from picture
+		where pic_id = #{pic_id}
+	</delete>
+</mapper>
