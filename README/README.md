@@ -1,7 +1,7 @@
 # wallpaper_system
 
-1、登录
- <img src="README/1.png" />
+1、登录界面
+ <img src="https://github.com/GD-Juff/wallpaper_system/blob/master/README/1.png?raw=true" />
 
 2、主页
 
