@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Juff.dao.PictureDao" >
+    <!-- 查询图片 -->
+    <select id="findpicture" parameterType="picture" resultType="picture">
+	    select *
+	    from picture  
+	    where pic_status = 2  
+	    and (pic_content like '%${pic_type}%' 
+	    OR pic_type like '%${pic_type}%' 
+	    OR pic_name like '%${pic_type}%')
+	    order by pic_id DESC
+	</select>
+  	
+  	<!-- 发布 -->
+    <insert id="upload" parameterType = "com.Juff.po.Picture">
+    	insert into picture(
+    	pic_name,
+    	pic_type,
+    	pic_src,
+    	pic_content,
+    	account,
+    	pic_status
+    	) 
+    	values
+    	(
+    	#{pic_name},
+    	#{pic_type},
+    	#{pic_src},
+    	#{pic_content},
+    	#{account},
+    	"1"
+    	)
+    </insert> 
+    
+    <!-- 查询我的上传 -->
+    <select id="findMyPicture" parameterType="picture" resultType="picture">
+	    select *
+	    from picture,user_info
+	    where picture.account=user_info.account 
+	    and picture.account = #{account} 
+	    and user_info.password = #{password}
+	    and pic_status = #{pic_status}
+	    order by pic_id DESC
+	</select>
+	
+	<!-- 根据pic_id查询图片 -->
+	<select id = "findIdPicture" parameterType="picture" resultType="picture" >
+		select *
+		from picture
+		where pic_id = #{pic_id}
+		and account = #{account}
+	</select>
+	
+	<!-- 删除我的图片 -->
+	<delete id="deleteMyPicture" parameterType="com.Juff.po.Picture">
+	delete 
+	from picture
+	where pic_id = #{pic_id}
+	and account = #{account}
+	and pic_src = #{pic_src}
+	</delete>
+	
+	
+	<!-- 修改 -->
+	<update id = "updateMyPicture" parameterType="com.Juff.po.Picture">
+	update picture
+	set pic_name = #{pic_name},
+    pic_type = #{pic_type},
+    pic_content = #{pic_content},
+    pic_status = "1"
+    where account = #{account}
+    and pic_id = #{pic_id}
+	</update>
+	
+</mapper>

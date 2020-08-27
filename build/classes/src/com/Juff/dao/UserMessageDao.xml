@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.Juff.dao.UserMessageDao" >
+	<!-- 查询新通知 -->
+	<select id="receiveMessage" parameterType="usermessage" resultType="usermessage">
+	select * 
+	from user_message
+	where read_status = "1" 
+	and account = #{account}
+	</select>
+	
+	<!-- 已接收 -->
+	<update id="updateReadStatus" parameterType="com.Juff.po.UserMessage">
+	update user_message
+	set read_status = "3"
+	where read_status = "1" 
+	and account = #{account}
+	</update>
+	
+	<!-- 插入新消息 -->
+	<insert id = "addUserMessage" parameterType="com.Juff.po.UserMessage">
+		insert into user_message(
+    	account,
+    	pic_id,
+    	read_status
+    	) 
+    	values
+    	(
+    	#{account},
+    	#{pic_id},
+    	#{read_status}
+    	)
+	</insert>
+</mapper>

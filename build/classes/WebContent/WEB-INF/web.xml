@@ -14,7 +14,7 @@
 
     <!-- 防止多端登陆 -->
     <listener>
-        <listener-class>com.chfeng.session.SessionListener</listener-class>
+        <listener-class>com.Juff.session.SessionListener</listener-class>
     </listener>
 
     <filter>

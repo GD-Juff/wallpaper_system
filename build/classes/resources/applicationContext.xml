@@ -14,6 +14,7 @@
     http://www.springframework.org/schema/aop/spring-aop-4.3.xsd 
     http://www.springframework.org/schema/tx 
     http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
     <!--读取db.properties -->
     <context:property-placeholder location="classpath:db.properties"/>
     <!-- 配置数据源 -->
@@ -34,12 +35,14 @@
          <!--初始化连接数  -->
          <property name="initialSize" value="${jdbc.initialSize}" />
 	</bean>
+
 	<!-- 事务管理器 -->
 	<bean id="transactionManager" class=
 	"org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<!-- 数据源 -->
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+
 	<!-- 通知 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
@@ -58,11 +61,13 @@
                                            read-only="true" />
 		</tx:attributes>
 	</tx:advice>
+
 	<!-- 切面 -->
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice"
-			 pointcut="execution(* com.chfeng.service.*.*(..))" />
+			 pointcut="execution(* com.Juff.service.*.*(..))" />
 	</aop:config>
+
 	<!-- 配置 MyBatis的工厂 -->
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 数据源 -->
@@ -71,10 +76,12 @@
 		<property name="configLocation" 
                      value="classpath:mybatis-config.xml" />
 	</bean>
-	<!-- 接口开发,扫描 com.chfeng.dao包 ，写在此包下的接口即可被扫描到 -->
+
+	<!-- 接口开发,扫描 com.Juff.dao包 ，写在此包下的接口即可被扫描到 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.chfeng.dao" />
+		<property name="basePackage" value="com.Juff.dao" />
 	</bean>
+
 	<!-- 配置扫描@Service注解 -->
-	<context:component-scan base-package="com.chfeng.service"/>	
+	<context:component-scan base-package="com.Juff.service"/>
 </beans>

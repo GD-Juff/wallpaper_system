@@ -77,7 +77,7 @@
         <span id="remind"></span>
         <div class='login_fields'>
             <div class='icon'>
-                <img alt="" src='${pageContext.request.contextPath}/img/user_icon_copy.png'>
+                <img alt="" src='${pageContext.request.contextPath}/img/user_icon_copy.svg'>
             </div>
             <input name="username" id="username" placeholder='用户名' maxlength="16" type='text'
                    Onblur="checkname()" autocomplete="off"/>
@@ -88,7 +88,7 @@
 
             <div class='login_fields__password'>
                 <div class='icon'>
-                    <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.png'>
+                    <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.svg'>
                 </div>
                 <input name="password" id="password" placeholder='密码' maxlength="16" type='password'
                        autocomplete="off"/>
@@ -100,7 +100,7 @@
 
                 <div class='login_fields__password'>
                     <div class='icon'>
-                        <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.png'>
+                        <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.svg'>
                     </div>
                     <input name="password2" id="password2" placeholder='确认密码' maxlength="16" type='password'
                            autocomplete="off"/>

@@ -6,10 +6,6 @@
 <head>
     <meta charset="UTF-8">
     <title>成图秀</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/layui.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/public.css?v=0.1">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/index.css?v=1.1">
@@ -147,4 +143,39 @@
 <script src='${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js'></script>
 <script src="${pageContext.request.contextPath}/js/index.js"></script>
 </body>
+<%--分析：虽然刷新与关闭都会走onbeforeunload与onunload，
+但关闭时onbeforeunload与onunload的时间差一般会在3毫秒内，而刷新事件的时间差一般会在10毫秒以上，
+可能因为刷新在加载新页面前内部机制还需要做一些准备工作，
+刷新事件的时间差竟能达到100毫秒左右，而关闭事件时间差还是3毫秒左右，
+这就大大保证了此方法的准确率，所以，判断浏览器窗口或者说是选项卡的关闭与刷新，
+此方法是比较合适的。--%>
+<script>
+    let beginTime = 0;//执行onbeforeunload的开始时间
+    let differTime = 0;//时间差
+
+    window.onbeforeunload = function () {
+        beginTime = new Date().getTime();
+    };
+
+    window.onunload = function () {
+        differTime = new Date().getTime() - beginTime;
+        if (differTime <= 5) {
+            // console.log("浏览器关闭")
+            $.ajax({
+                type: "POST",
+                url: "${pageContext.request.contextPath}/user/logout.action?user=${currentUser.account}", //跳转到相应后台，处理退出操作
+                dataType: "JSON",
+                cache: false,
+                // success: function (msg) {
+                //     console.log(msg);
+                // },
+                // error: function (err) {
+                //     console.log(err)
+                // }
+            })
+        } else {
+            // console.log("浏览器刷新")
+        }
+    }
+</script>
 </html>

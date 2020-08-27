@@ -20,14 +20,17 @@
                location="classpath:resource.properties" />
     <!-- 配置扫描器 -->
     <context:component-scan 
-               base-package="com.chfeng.controller" />
+               base-package="com.Juff.controller" />
+
     <!-- 注解驱动：配置处理器映射器和适配器 -->
     <mvc:annotation-driven />
+
     <!--配置静态资源的访问映射，此配置中的文件，将不被前端控制器拦截 -->
     <mvc:resources location="/css/" mapping="/css/**" />
     <mvc:resources location="/img/" mapping="/img/**" />
     <mvc:resources location="/js/" mapping="/js/**" />	
-    <!-- 配置视图解释器ViewResolver -->
+
+    <!-- 配置视图解析器ViewResolver -->
     <bean id="jspViewResolver" class=
     "org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
@@ -45,7 +48,7 @@
 	<mvc:interceptors>
     	<mvc:interceptor>
         	<mvc:mapping path="/**" />
-        	<bean class="com.chfeng.interceptor.LoginInterceptor" />
+        	<bean class="com.Juff.interceptor.LoginInterceptor" />
     	</mvc:interceptor>
 	</mvc:interceptors>	
 	

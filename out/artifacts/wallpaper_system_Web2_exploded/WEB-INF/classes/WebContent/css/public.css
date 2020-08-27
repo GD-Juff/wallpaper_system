@@ -146,10 +146,9 @@ input {
 	vertical-align: middle;
 }
  .nav-right .username{
- 	position:relative; 
+ 	position:relative;
 	top:35%;
-	right:380%;
-	/*font-size:17px;*/
+	right:600%;
 	font-weight:bold;
 	color:white; 
 	font-size:15px;

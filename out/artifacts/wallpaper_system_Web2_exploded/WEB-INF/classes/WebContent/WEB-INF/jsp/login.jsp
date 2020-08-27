@@ -14,7 +14,7 @@
     <link href="${pageContext.request.contextPath}/css/demo.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/page.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-3.4.1.js"></script>
-    <!-- 判断非空 -->
+    <!-- 判断非空用户 -->
     <script type="text/javascript">
         function check() {
             var account = document.getElementById("account").value;
@@ -42,7 +42,7 @@
     </div>
     <div class='login_fields'>
         <div class='icon'>
-            <img alt="" src='${pageContext.request.contextPath}/img/user_icon_copy.png'>
+            <img alt="" src='${pageContext.request.contextPath}/img/user_icon_copy.svg'>
         </div>
         <form action="${pageContext.request.contextPath}/user/login.action" method="post" onsubmit="return check()">
 
@@ -53,7 +53,7 @@
 
             <div class='login_fields__password'>
                 <div class='icon'>
-                    <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.png'>
+                    <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.svg'>
                 </div>
                 <input name="password" id="password" placeholder='密码' maxlength="16" type='password'
                        autocomplete="off"/>

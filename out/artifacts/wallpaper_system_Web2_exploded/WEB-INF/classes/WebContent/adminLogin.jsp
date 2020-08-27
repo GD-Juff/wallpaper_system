@@ -20,6 +20,22 @@
         }
     </style>
     <title>管理员登录</title>
+    <!-- 判断非空用户 -->
+    <script type="text/javascript">
+        function check() {
+            var account = document.getElementById("adminname").value;
+            var password = document.getElementById("password").value;
+            if (account == "") {
+                alert("请填写账号");
+                return false;
+            }
+            if (password == "") {
+                alert("请填写密码");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
 <canvas class="stage"></canvas>
@@ -27,7 +43,7 @@
     <canvas id="canvas_app" class="first"></canvas>
 </div>
 <form action="${pageContext.request.contextPath}/adminuser/adminlogin.action"
-      method="post" id="registform" onsubmit="return check1()">
+      method="post" id="registform" onsubmit="return check()">
     <div class='login' style="position: absolute;z-index: 10;">
         <div class='login_title'>
             <span><h3>管理员登录</h3></span>
@@ -40,7 +56,7 @@
                 <tr>
 
                     <td style="position:relative;top:10px">
-                        <img alt="" src='${pageContext.request.contextPath}/img/user_icon_copy.png'
+                        <img alt="" src='${pageContext.request.contextPath}/img/user_icon_copy.svg'
                              style="position:relative;top:-5px ;left:33px">
                         <input type="text" name="adminname" id="adminname" placeholder='账号'
                                style="position:relative;top:-34px ;left:-3px">
@@ -54,7 +70,7 @@
                     <div class="icon"></div>
                     <tr>
                         <td>
-                            <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.png'
+                            <img alt="" src='${pageContext.request.contextPath}/img/lock_icon_copy.svg'
                                  style="position:relative;bottom:20px ;left:33px">
                             <input type="password" name="password" id="password" placeholder='密码'
                                    style="position:relative;bottom:49px ;left:-3px">
